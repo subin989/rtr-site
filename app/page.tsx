@@ -24,9 +24,9 @@ export default function Home() {
       <AboutSectionOne />
       <Features />
       <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact />
+      {/* <Pricing /> */}
+      {/* <Blog /> */}
+      {/* <Contact /> */}
     </>
   );
 }
