@@ -14,18 +14,18 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="images/logo/logo-2.svg"
+                    src="/images/logo/logo.png"
                     alt="logo"
                     className="w-full dark:hidden"
-                    width={140}
-                    height={30}
+                    width={50}
+                    height={20}
                   />
                   <Image
-                    src="images/logo/logo.svg"
+                    src="/images/logo/logo.png"
                     alt="logo"
                     className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
+                    width={60}
+                    height={20}
                   />
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
@@ -105,25 +105,34 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Blog{" "}
+                      Home{" "}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
-                    >
-                      {" "}
-                      Pricing{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/"
+                      href="/about"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
                       About{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/events"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      Events{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/contact"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      Contact us{" "}
                     </a>
                   </li>
                 </ul>
@@ -133,34 +142,52 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
+                  Committees
                 </h2>
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      TOS{" "}
+                      Club Admin{" "}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Privacy Policy{" "}
+                      Proffessional{" "}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="#"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Refund Policy{" "}
+                      Club Service{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      Membership{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      International{" "}
                     </a>
                   </li>
                 </ul>
@@ -179,7 +206,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Open Support Ticket{" "}
+                      Rotaract Club of Budanilkantha
                     </a>
                   </li>
                   <li>
@@ -188,10 +215,28 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Terms of Use{" "}
+                      Budanilkantha
                     </a>
                   </li>
                   <li>
+                    <a
+                      href="/"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      rac-budanilkantha@gmail.com{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      982563747889{" "}
+                    </a>
+                  </li>
+                  {/* <li>
                     <a
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
@@ -199,7 +244,7 @@ const Footer = () => {
                       {" "}
                       About{" "}
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -208,7 +253,7 @@ const Footer = () => {
         <div className="bg-primary/10 py-8">
           <div className="container">
             <p className="text-center text-base text-body-color dark:text-white">
-              Template by UIdeck and <a href="https://nextjstemplates.com" rel="nofollow noopener">Next.js Templates</a>
+              All Rights Reserved 2023
             </p>
           </div>
         </div>
