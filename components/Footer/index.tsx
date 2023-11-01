@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  MailOutlined,
+  PhoneOutlined,
+  EnvironmentOutlined,
+  HomeOutlined,
+} from "@ant-design/icons";
 
 const Footer = () => {
   return (
@@ -128,6 +134,15 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
+                      href="/past-presidents"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      {" "}
+                      Past Presidents{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href="/contact"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
@@ -200,40 +215,43 @@ const Footer = () => {
                   Support & Help
                 </h2>
                 <ul>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <HomeOutlined className="mt-1 mr-2 text-primary" />
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
                       Rotaract Club of Budanilkantha
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <EnvironmentOutlined className="mt-1 mr-2 text-primary" />
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
                       Budanilkantha
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <MailOutlined className="mt-1 mr-2 text-primary" />
                     <a
-                      href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      href="mailto:rac-budanilkantha@gmail.com"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
-                      {" "}
-                      rac-budanilkantha@gmail.com{" "}
+                      rac-budanilkantha@gmail.com
                     </a>
                   </li>
-                  <li>
+
+                  <li className="flex items-center mb-4">
+                    <PhoneOutlined className="mt-1 mr-2 text-primary" />
                     <a
-                      href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      href="tel:982563747889"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
-                      {" "}
-                      982563747889{" "}
+                      982563747889
                     </a>
                   </li>
                   {/* <li>
