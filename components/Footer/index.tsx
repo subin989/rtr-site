@@ -5,6 +5,10 @@ import {
   PhoneOutlined,
   EnvironmentOutlined,
   HomeOutlined,
+  InfoCircleOutlined,
+  ThunderboltOutlined,
+  TeamOutlined,
+  WhatsAppOutlined,
 } from "@ant-design/icons";
 
 const Footer = () => {
@@ -105,46 +109,51 @@ const Footer = () => {
                   Useful Links
                 </h2>
                 <ul>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <HomeOutlined className="mr-2 text-primary" />
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
                       Home{" "}
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <InfoCircleOutlined className="mr-2 text-primary"/>
                     <a
                       href="/about"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
                       About{" "}
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <ThunderboltOutlined className="mr-2 text-primary"/>
                     <a
                       href="/events"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
                       Events{" "}
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <TeamOutlined className="mr-2 text-primary"/>
                     <a
                       href="/past-presidents"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
                       Past Presidents{" "}
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center mb-4">
+                    <WhatsAppOutlined className="mr-2 text-primary"/>
                     <a
                       href="/contact"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
                       Contact us{" "}
