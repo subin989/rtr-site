@@ -1,10 +1,10 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
+import Blog from "@/components/Events";
 import PatnerClubs from "@/components/PatnerClub";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
-import Features from "@/components/Features";
+import CurrentMember from "@/components/CurrentMember";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Members from "@/components/Members";
@@ -22,7 +22,7 @@ export default function Home() {
       <AboutSectionTwo />
       <PatnerClubs />
       <AboutSectionOne />
-      <Features />
+      <CurrentMember />
       <Members />
       {/* <Pricing /> */}
       {/* <Blog /> */}

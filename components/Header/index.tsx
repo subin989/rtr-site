@@ -141,9 +141,9 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div>
+              {/* <div>
                 <ThemeToggler />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
