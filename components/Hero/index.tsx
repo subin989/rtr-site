@@ -7,7 +7,7 @@ const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/images/hero/hands.jpg')`,
+          backgroundImage: `url('/images/hero/cleaning.jpg')`,
         }}
       >
         <div className="text-left text-white px-4 sm:px-8 lg:px-16">
