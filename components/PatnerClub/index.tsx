@@ -13,25 +13,25 @@ const brandsData: Brand[] = [
     id: 2,
     name: "RAC Kupandol",
     href: "#",
-    image: "/images/brands/kopundol.png",
+    image: "/images/collab/kopundol.png",
   },
   {
     id: 3,
     name: "RAC Vedavyasa",
     href: "#",
-    image: "/images/brands/vedavayas.png",
+    image: "/images/collab/vedavayas.png",
   },
   {
     id: 4,
     name: "RAC Bhadrapur",
     href: "#",
-    image: "/images/brands/bhadrapur.png",
+    image: "/images/collab/bhadrapur.png",
   },
   {
     id: 5,
     name: "SSRC",
     href: "#",
-    image: "/images/brands/SSRC.png",
+    image: "/images/collab/SSRC.png",
   },
 ];
 
