@@ -1,81 +1,152 @@
-import { Testimonial } from "@/types/testimonial";
+import { MemberDetails } from "@/types/memberDetails";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 
-const testimonialData: Testimonial[] = [
+const testimonialData: MemberDetails[] = [
   {
     id: 1,
     name: "Rtr. Udit Kumar Mahato",
     designation: "President",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
     image: "/images/testimonials/auth-01.png",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    name: "Rtr. Anshu Maharjan",
+    designation: "Immediate Past President",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
     image: "/images/testimonials/auth-02.png",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Rtr. Shishir Aryal",
+    designation: "Secretary",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
+    image: "/images/testimonials/Shishir-Aryal.jpg",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Rtr. Subin Satyal",
+    designation: "Club Admin",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
+    image: "/images/testimonials/subin.jpg",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+  },
+  {
+    id: 3,
+    name: "Rtr. Ishan Poudel",
+    designation: "President Elect",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
     image: "/images/testimonials/id12.jpg",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Rtr. Sushna Gurung",
+    designation: "International Service Chair",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
+    image: "/images/testimonials/Sushna-Gurung.jpg",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/id12.jpg",
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Rtr. Abiral Shrestha",
+    designation: "Club Service Chair",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
+    image: "/images/testimonials/Abiral-Shrestha.jpg",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/id12.jpg",
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    name: "Rtr. Simran Poudel",
+    designation: "Professional Development Chair",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
     image: "/images/testimonials/id12.jpg",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    name: "Rtr. Manisha Ghimire",
+    designation: "Membership Chair",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
     image: "/images/testimonials/id12.jpg",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Rtr. Manish Thapaliya",
+    designation: "Joint Secretary",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
+    image: "/images/testimonials/Manish-Thapaliya.jpg",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/id12.jpg",
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
-  
+  {
+    id: 3,
+    name: "Rtr. Bharat Kapari",
+    designation: "Sergant at Arms",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
+    image: "/images/testimonials/id12.jpg",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+  },
+  {
+    id: 3,
+    name: "Rtr. Sadiksha Ghimire",
+    designation: "Public Image Chair",
+    email: "test@gmail.com",
+    phone: "98765345456",
+    fb_link: "www.fb.com",
+    insta_link: "www.insta.com",
+    image: "/images/testimonials/id12.jpg",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+  },
 ];
 
 const Members = () => {

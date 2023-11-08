@@ -38,9 +38,9 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
+        className={`header top-0 left-0 z-20 flex w-full items-center bg-black ${
           sticky
-            ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
+            ? "!fixed !z-[9999] !bg-white !bg-opacity-90 shadow-sticky backdrop-blur-lg !transition dark:!bg-primary dark:!bg-opacity-40"
             : "absolute"
         }`}
       >
@@ -56,7 +56,7 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-                  width={80}
+                  width={60}
                   height={20}
                 />
               </Link>

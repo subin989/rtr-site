@@ -1,37 +1,112 @@
-import { Testimonial } from "@/types/testimonial";
+"use client";
+import { MemberDetails } from "@/types/memberDetails";
+import {
+  MailOutlined,
+  PhoneOutlined,
+  FacebookOutlined,
+  InstagramOutlined,
+  LinkedinOutlined,
+  TwitterOutlined,
+  LinkedinFilled,
+  FacebookFilled,
+  InstagramFilled,
+} from "@ant-design/icons";
 import Image from "next/image";
-const starIcon = (
-  <svg width="18" height="16" viewBox="0 0 18 16" className="fill-current">
-    <path d="M9.09815 0.361679L11.1054 6.06601H17.601L12.3459 9.59149L14.3532 15.2958L9.09815 11.7703L3.84309 15.2958L5.85035 9.59149L0.595291 6.06601H7.0909L9.09815 0.361679Z" />
-  </svg>
-);
 
-const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
-  const { name, image, content, designation } = testimonial;
+const SingleTestimonial = ({ testimonial }: { testimonial: MemberDetails }) => {
+  const {
+    name,
+    image,
+    email,
+    phone,
+    fb_link,
+    insta_link,
+    designation,
+    content,
+  } = testimonial;
 
   return (
     <div className="w-full">
       <div
-        className="wow fadeInUp rounded-md bg-white p-8 shadow-one dark:bg-[#1D2144] lg:px-5 xl:px-8"
+        className="wow fadeInUp rounded-md bg-white p-8 shadow-one dark:bg-[#1D2144] lg:px-5 xl:px-8 "
         data-wow-delay=".1s"
       >
-        <div className="flex items-center">
-          <div className="relative mr-4 h-[100px] w-full max-w-[100px] overflow-hidden rounded-full">
+        <div className="flex items-center justify-center mb-3">
+          <div className="relative mr-4 h-[200px] w-full max-w-[200px] overflow-hidden rounded-full">
             <Image src={image} alt={name} fill />
           </div>
-          <div className="w-full">
-            <h5 className="mb-1 text-lg font-semibold text-dark dark:text-white lg:text-base xl:text-lg">
+        </div>
+        <div>
+          <div className="w-full mb-3">
+            <h5 className="flex items-center justify-center mb-2 text-xl font-semibold text-dark dark:text-white lg:text-lg xl:text-xl">
               {name}
             </h5>
-            <p className="text-sm text-body-color">{designation}</p>
+            <p className="flex items-center justify-center text-sm text-body-color">
+              {designation}
+            </p>
           </div>
+          <div className="w-full mb-3">
+            <p className="flex items-center justify-center text-sm text-body-color">
+              {content}
+            </p>
+          </div>
+          <ul className="list-none p-0 ">
+            <div className="flex items-center justify-center mb-3">
+              <li className="flex items-center mr-3">
+                <MailOutlined className="mr-2 text-primary" />
+                <span className="text-body-color text-md">{email}</span>
+              </li>
+              <li className="flex items-center">
+                <PhoneOutlined className="mr-2 text-primary" />
+                <span className="text-body-color text-md">{phone}</span>
+              </li>
+            </div>
+            <div className="flex items-center justify-center mb-3">
+              <li className="flex items-center">
+                <a
+                  href={fb_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary text-lg underline"
+                >
+                  <FacebookFilled className="mr-3 text-white hover:text-primary" />
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  href={insta_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary text-lg underline"
+                >
+                  <InstagramFilled className="mr-3 text-white hover:text-primary" />
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  href={insta_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary text-lg underline"
+                >
+                  <LinkedinFilled className="mr-3 text-white hover:text-primary" />
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  href={insta_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary text-lg underline"
+                >
+                  <TwitterOutlined className="mr-3 text-white hover:text-primary" />
+                </a>
+              </li>
+            </div>
+          </ul>
         </div>
-        <p className="mt-8 border-b border-body-color border-opacity-10 pb-8 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-10 dark:text-white">
-          “{content}
-        </p>
       </div>
     </div>
   );
 };
-
 export default SingleTestimonial;
