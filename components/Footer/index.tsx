@@ -142,11 +142,11 @@ const Footer = () => {
                   <li className="flex items-center mb-4">
                     <TeamOutlined className="mr-2 text-primary"/>
                     <a
-                      href="/past-presidents"
+                      href="/all-members"
                       className="text-base font-medium text-body-color hover:text-primary flex items-center"
                     >
                       {" "}
-                      Past Presidents{" "}
+                      Members{" "}
                     </a>
                   </li>
                   <li className="flex items-center mb-4">

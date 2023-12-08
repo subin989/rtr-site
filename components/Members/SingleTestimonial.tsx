@@ -110,3 +110,6 @@ const SingleTestimonial = ({ testimonial }: { testimonial: MemberDetails }) => {
   );
 };
 export default SingleTestimonial;
+
+
+// write the array of colors

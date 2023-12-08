@@ -21,8 +21,8 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
-    title: "Past Presidents",
-    path: "/past-presidents",
+    title: "Members",
+    path: "/all-members",
     newTab: false,
   },
   {
