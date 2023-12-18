@@ -20,6 +20,7 @@ module.exports = {
       primary: "#6A15C8",
       yellow: "#FBB040",
       "body-color": "#959CB1",
+      "error-color": "#f7141f",
     },
     screens: {
       xs: "450px",
