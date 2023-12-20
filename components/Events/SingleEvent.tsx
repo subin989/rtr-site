@@ -1,9 +1,18 @@
+"use client";
 import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const SingleEvent = ({ blog }: { blog: Blog }) => {
   const { title, image, paragraph, author, tags, publishDate } = blog;
+  const [showFullText, setShowFullText] = useState(false);
+
+  const toggleText = () => {
+    setShowFullText(!showFullText);
+  };
+
+  const displayText = showFullText ? paragraph : `${paragraph.slice(0, 50)}...`;
   return (
     <>
       <div
@@ -26,7 +35,10 @@ const SingleEvent = ({ blog }: { blog: Blog }) => {
             </Link>
           </h3>
           <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
-            {paragraph}
+            {displayText}
+            <span className="text-primary cursor-pointer" onClick={toggleText}>
+              {showFullText ? " ...less" : " ...more"}
+            </span>
           </p>
           <div className="flex items-center">
             <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
