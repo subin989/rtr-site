@@ -1,5 +1,4 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import AboutSection from "@/components/About/AboutSection";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const AboutPage = () => {
@@ -7,10 +6,10 @@ const AboutPage = () => {
     <>
       <Breadcrumb
         pageName="About Us"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        description="Rotaract club of Budhanilkantha envisions itself as an outstanding club that practices social work and ensures to create opportunities for youth and strive to make a positive contribution to the society."
       />
       {/* <AboutSectionOne /> */}
-      <AboutSectionTwo />
+      <AboutSection />
     </>
   );
 };
