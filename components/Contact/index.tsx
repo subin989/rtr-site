@@ -122,7 +122,7 @@ const Contact: FC = () => {
                       type="submit"
                     >
                       {loading ? (
-                        <Spin /> // Display Ant Design Spin while loading
+                        <Spin /> 
                       ) : (
                         "Submit Ticket"
                       )}
