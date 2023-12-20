@@ -9,7 +9,7 @@ const Blog = () => {
     <>
       <Breadcrumb
         pageName="Past Events"
-        description="These are our interesting events...."
+        description="Relive the moments: Explore our past events, celebrating memories and showcasing our journey."
       />
 
       <section className="pt-[120px] pb-[120px]">
