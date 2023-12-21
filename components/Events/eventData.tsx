@@ -1,6 +1,6 @@
-import { Blog } from "@/types/blog";
+import { Event } from "@/types/event";
 
-const eventData: Blog[] = [
+const eventData: Event[] = [
   {
     id: 1,
     title: "18th Chater's Day",
@@ -34,7 +34,7 @@ const eventData: Blog[] = [
   {
     id: 3,
     title:
-      "Joint Installation of Rotary Club of Budanilkantha",
+      "Joint Installation of Rotary Club",
     paragraph:
       "The joint installation ceremony of the Rotary Club of Budanilkantha and the Rotaract Club of Budanilkantha took place at Fresh Farm in Budanilkantha on August 5th, officially commencing at 5:50 PM.",
     image: "/images/events/installation-ceremony.jpg",
@@ -121,7 +121,7 @@ const eventData: Blog[] = [
     title: "Plant Adoption Campaign",
     paragraph:
       "On 10th of September, Rotaract Club of Budhanilkantha started an online Tree Adoption Campaign within the club. Over a period of 28 days, 10 Rotaractors adopted 16 plants in their homes and contributed towards the campaign. ",
-    image: "/images/events/tree-plantation.jpg",
+    image: "/images/events/tree-plantation.png",
     author: {
       name: "Rtr. Abiral Shrestha",
       image: "/images/events/author-03.png",
