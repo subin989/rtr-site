@@ -4,7 +4,7 @@ type Author = {
   designation: string;
 };
 
-export type Blog = {
+export type Event = {
   id: number;
   title: string;
   paragraph: string;
