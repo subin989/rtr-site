@@ -1,4 +1,53 @@
+"use client";
+
+import { Spin, notification } from "antd";
+import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+export type FormData = {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  college: string;
+};
+
 const SignupPage = () => {
+  const { register, handleSubmit, reset } = useForm<FormData>();
+
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    setLoading(true);
+    sendEmail(data);
+  };
+  function sendEmail(data: FormData) {
+    const apiEndpoint = "/api/apply";
+    fetch(apiEndpoint, {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((response) => {
+        notification.success({
+          message: "Success",
+          description: response.message,
+        });
+        setLoading(false);
+        reset();
+      })
+      .catch((err) => {
+        notification.error({
+          message: "Error",
+          description: err.message || "Something went wrong!",
+        });
+        setLoading(false);
+      });
+  }
+
   return (
     <>
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
@@ -14,20 +63,20 @@ const SignupPage = () => {
                 </p>
 
                 <div className="mb-8 flex items-center justify-center"></div>
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="mb-8">
                     <label
                       htmlFor="name"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
-                      {" "}
-                      Full Name{" "}
+                      Full Name
                     </label>
                     <input
                       type="text"
                       name="name"
                       placeholder="Enter your full name"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                      {...register("name", { required: true })}
                     />
                   </div>
                   <div className="mb-8">
@@ -43,11 +92,12 @@ const SignupPage = () => {
                       name="email"
                       placeholder="Enter your Email"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                      {...register("email", { required: true })}
                     />
                   </div>
                   <div className="mb-8">
                     <label
-                      htmlFor="password"
+                      htmlFor="phoneNumber"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
                       {" "}
@@ -55,9 +105,10 @@ const SignupPage = () => {
                     </label>
                     <input
                       type="text"
-                      name="college"
+                      name="phoneNumber"
                       placeholder="Enter your phone number"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                      {...register("phoneNumber", { required: true })}
                     />
                   </div>
                   <div className="mb-8">
@@ -73,11 +124,15 @@ const SignupPage = () => {
                       name="college"
                       placeholder="Enter your College Name"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                      {...register("college", { required: true })}
                     />
                   </div>
-                  <div className="mb-6">
-                    <button className="shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
-                      Apply
+                  <div className="w-full px-4">
+                    <button
+                      className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+                      type="submit"
+                    >
+                      {loading ? <Spin /> : "Apply"}
                     </button>
                   </div>
                 </form>
