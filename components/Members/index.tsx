@@ -43,13 +43,13 @@ const testimonialData: MemberDetails[] = [
     id: 3,
     name: "Rtr. Subin Satyal",
     designation: "Club Admin",
-    email: "test@gmail.com",
-    phone: "98765345456",
-    fb_link: "www.fb.com",
+    email: "satyalsubin33@gmail.com",
+    phone: "9851866043",
+    fb_link: "https://www.facebook.com/subinsatyal21",
     insta_link: "www.insta.com",
     image: "/images/testimonials/subin.jpg",
     content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+      "Passionate web developer and tech enthusiast with a heart for social impact and community involvement.",
   },
   {
     id: 3,
