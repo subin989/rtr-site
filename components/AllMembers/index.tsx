@@ -47,7 +47,7 @@ const testimonialData: MemberDetails[] = [
     phone: "23566788",
     fb_link: "https://www.facebook.com/binayak.bhattarai.90",
     insta_link: "https://www.instagram.com/binayak_bhattarai/",
-    image: "",
+    image: "/images/testimonials/binayak.jpg",
     content:
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
