@@ -40,11 +40,23 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 4,
+    name: "Rtr. Binayak Bhattarai",
+    designation: "Treasurer",
+    email: "test@gmail.com",
+    phone: "23566788",
+    fb_link: "/",
+    insta_link: "www.insta.com",
+    image: "",
+    content:
+      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+  },
+  {
+    id: 5,
     name: "Rtr. Subin Satyal",
     designation: "Club Admin",
     email: "satyalsubin33@gmail.com",
-    phone: "9851866043",
+    phone: "9861866054",
     fb_link: "https://www.facebook.com/subinsatyal21",
     insta_link: "www.insta.com",
     image: "/images/testimonials/subin.jpg",
@@ -52,7 +64,7 @@ const testimonialData: MemberDetails[] = [
       "Passionate web developer and tech enthusiast with a heart for social impact and community involvement.",
   },
   {
-    id: 3,
+    id: 6,
     name: "Rtr. Ishan Poudel",
     designation: "President Elect",
     email: "ishanpoudel15@gmail.com",
@@ -64,7 +76,7 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 7,
     name: "Rtr. Sushna Gurung",
     designation: "International Service Chair",
     email: "sushna.grg@gmail.com",
@@ -76,7 +88,7 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 8,
     name: "Rtr. Abiral Shrestha",
     designation: "Club Service Chair",
     email: "abiralstha399@gmail.com",
@@ -88,7 +100,7 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 9,
     name: "Rtr. Simran Poudel",
     designation: "Professional Development Chair",
     email: "simranpoudel29@gmail.com",
@@ -100,7 +112,7 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 10,
     name: "Rtr. Manisha Ghimire",
     designation: "Membership Chair",
     email: "mghimire0008@gmail.com",
@@ -112,7 +124,7 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 11,
     name: "Rtr. Manish Thapaliya",
     designation: "Joint Secretary",
     email: "mthapaliya0512@gmail.com",
@@ -124,7 +136,7 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 12,
     name: "Rtr. Bharat Kapari",
     designation: "Sergant at Arms",
     email: "bharatkaparikumar@gmail.com",
@@ -136,14 +148,14 @@ const testimonialData: MemberDetails[] = [
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },
   {
-    id: 3,
+    id: 13,
     name: "Rtr. Sadiksha Ghimire",
     designation: "Public Image Chair",
-    email: "sadikshyaghimire107@gmail.com",
-    phone: "9869021025",
+    email: "test@gmail.com",
+    phone: "98765345456",
     fb_link: "www.fb.com",
     insta_link: "www.insta.com",
-    image: "/images/testimonials/sadikshya.jpg",
+    image: "/images/testimonials/id12.jpg",
     content:
       "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
   },

@@ -39,12 +39,11 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  Rotaract Club of Budanilkantha
                 </p>
                 <div className="flex items-center">
                   <a
-                    href="/"
+                    href="https://www.facebook.com/rotaract.budhanilkantha.5"
                     aria-label="social-link"
                     className="mr-6 text-[#CED3F6] hover:text-primary"
                   >
@@ -120,7 +119,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="flex items-center mb-4">
-                    <InfoCircleOutlined className="mr-2 text-primary"/>
+                    <InfoCircleOutlined className="mr-2 text-primary" />
                     <a
                       href="/about"
                       className="text-base font-medium text-body-color hover:text-primary flex items-center"
@@ -130,7 +129,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="flex items-center mb-4">
-                    <ThunderboltOutlined className="mr-2 text-primary"/>
+                    <ThunderboltOutlined className="mr-2 text-primary" />
                     <a
                       href="/events"
                       className="text-base font-medium text-body-color hover:text-primary flex items-center"
@@ -140,7 +139,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="flex items-center mb-4">
-                    <TeamOutlined className="mr-2 text-primary"/>
+                    <TeamOutlined className="mr-2 text-primary" />
                     <a
                       href="/all-members"
                       className="text-base font-medium text-body-color hover:text-primary flex items-center"
@@ -150,7 +149,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="flex items-center mb-4">
-                    <WhatsAppOutlined className="mr-2 text-primary"/>
+                    <WhatsAppOutlined className="mr-2 text-primary" />
                     <a
                       href="/contact"
                       className="text-base font-medium text-body-color hover:text-primary flex items-center"
