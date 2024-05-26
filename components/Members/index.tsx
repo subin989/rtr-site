@@ -1,175 +1,354 @@
-import { MemberDetails } from "@/types/memberDetails";
+"use client"
+import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import { MemberDetails } from "@/types/memberDetails";
 
-const testimonialData: MemberDetails[] = [
-  {
-    id: 1,
-    name: "Rtr. Udit Kumar Mahato",
-    designation: "President",
-    email: "test@gmail.com",
-    phone: "98765345456",
-    fb_link: "https://www.facebook.com/datasavvy1998",
-    insta_link: "https://www.instagram.com/datasavvy1998/",
-    image: "/images/testimonials/udit.png",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 2,
-    name: "Rtr. Anshu Maharjan",
-    designation: "Immediate Past President",
-    email: "Maharjan.anshu.am@gmail.com",
-    phone: "9862680627",
-    fb_link: "https://www.facebook.com/maharjan.anshu.am",
-    insta_link: "https://www.instagram.com/aanshu.m/",
-    image: "/images/testimonials/anshu.png",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 3,
-    name: "Rtr. Shishir Aryal",
-    designation: "Secretary",
-    email: "aryalshishir1@gmail.com",
-    phone: "9840478710",
-    fb_link: "https://www.facebook.com/sisir.aryal.9",
-    insta_link: "https://www.instagram.com/shishir_aryal_010/",
-    image: "/images/testimonials/Shishir-Aryal.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 4,
-    name: "Rtr. Binayak Bhattarai",
-    designation: "Treasurer",
-    email: "test@gmail.com",
-    phone: "23566788",
-    fb_link: "https://www.facebook.com/binayak.bhattarai.90",
-    insta_link: "https://www.instagram.com/binayak_bhattarai/",
-    image: "",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 5,
-    name: "Rtr. Subin Satyal",
-    designation: "Club Admin",
-    email: "satyalsubin33@gmail.com",
-    phone: "9861866054",
-    fb_link: "https://www.facebook.com/subinsatyal21",
-    insta_link: "https://www.instagram.com/subinsatyal02/",
-    image: "/images/testimonials/subin.jpg",
-    content:
-      "Passionate web developer and tech enthusiast with a heart for social impact and community involvement.",
-  },
-  {
-    id: 6,
-    name: "Rtr. Ishan Poudel",
-    designation: "President Elect",
-    email: "ishanpoudel15@gmail.com",
-    phone: "9847386065",
-    fb_link: "https://www.facebook.com/profile.php?id=100013864575180",
-    insta_link: "https://www.instagram.com/itis_ishaann/",
-    image: "/images/testimonials/ishan.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 7,
-    name: "Rtr. Sushna Gurung",
-    designation: "International Service Chair",
-    email: "sushna.grg@gmail.com",
-    phone: "9861788617",
-    fb_link: "https://www.facebook.com/profile.php?id=100009133426904",
-    insta_link: "https://www.instagram.com/_sushnax/",
-    image: "/images/testimonials/Sushna-Gurung.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 8,
-    name: "Rtr. Abiral Shrestha",
-    designation: "Club Service Chair",
-    email: "abiralstha399@gmail.com",
-    phone: "9843564405",
-    fb_link: "https://www.facebook.com/PandaOP99",
-    insta_link: "https://www.instagram.com/shrestha_abiral99/",
-    image: "/images/testimonials/Abiral-Shrestha.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 9,
-    name: "Rtr. Simran Poudel",
-    designation: "Professional Development Chair",
-    email: "simranpoudel29@gmail.com",
-    phone: "9818392627",
-    fb_link: "https://www.facebook.com/profile.php?id=100009007588227",
-    insta_link: "https://www.instagram.com/siimraan.p/",
-    image: "/images/testimonials/simran.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 10,
-    name: "Rtr. Manisha Ghimire",
-    designation: "Membership Chair",
-    email: "mghimire0008@gmail.com",
-    phone: "9841563721",
-    fb_link: "https://www.facebook.com/manisha.ghimire.mindful.lady",
-    insta_link: "https://www.instagram.com/_manisha_ghimire_721/",
-    image: "/images/testimonials/manisha.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 11,
-    name: "Rtr. Manish Thapaliya",
-    designation: "Joint Secretary",
-    email: "mthapaliya0512@gmail.com",
-    phone: "9803369377",
-    fb_link: "https://www.facebook.com/manish.thapaliya.00",
-    insta_link: "https://www.instagram.com/manish.thapaliya.7.0/",
-    image: "/images/testimonials/Manish-Thapaliya.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 12,
-    name: "Rtr. Bharat Kapari",
-    designation: "Sergant at Arms",
-    email: "bharatkaparikumar@gmail.com",
-    phone: "9814822904",
-    fb_link: "https://www.facebook.com/bharatkapari12",
-    insta_link: "https://www.instagram.com/bharat_kapari/",
-    image: "/images/testimonials/bharat.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-  {
-    id: 13,
-    name: "Rtr. Sadiksha Ghimire",
-    designation: "Public Image Chair",
-    email: "test@gmail.com",
-    phone: "98765345456",
-    fb_link: "https://www.facebook.com/sadikshya.ghimire.3956/",
-    insta_link: "https://www.instagram.com/_.sadikshyaghimire._/",
-    image: "/images/testimonials/sadikshya.jpg",
-    content:
-      "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
-  },
-];
+const boardMembers = {
+  "2023/24": [
+    {
+      id: 1,
+      name: "Rtr. Udit Kumar Mahato",
+      designation: "President",
+      email: "test@gmail.com",
+      phone: "98765345456",
+      fb_link: "https://www.facebook.com/datasavvy1998",
+      insta_link: "https://www.instagram.com/datasavvy1998/",
+      image: "/images/testimonials/udit.png",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 2,
+      name: "Rtr. Anshu Maharjan",
+      designation: "Immediate Past President",
+      email: "Maharjan.anshu.am@gmail.com",
+      phone: "9862680627",
+      fb_link: "https://www.facebook.com/maharjan.anshu.am",
+      insta_link: "https://www.instagram.com/aanshu.m/",
+      image: "/images/testimonials/anshu.png",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 3,
+      name: "Rtr. Shishir Aryal",
+      designation: "Secretary",
+      email: "aryalshishir1@gmail.com",
+      phone: "9840478710",
+      fb_link: "https://www.facebook.com/sisir.aryal.9",
+      insta_link: "https://www.instagram.com/shishir_aryal_010/",
+      image: "/images/testimonials/Shishir-Aryal.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 4,
+      name: "Rtr. Binayak Bhattarai",
+      designation: "Treasurer",
+      email: "test@gmail.com",
+      phone: "23566788",
+      fb_link: "https://www.facebook.com/binayak.bhattarai.90",
+      insta_link: "https://www.instagram.com/binayak_bhattarai/",
+      image: "",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 5,
+      name: "Rtr. Subin Satyal",
+      designation: "Club Admin",
+      email: "satyalsubin33@gmail.com",
+      phone: "9861866054",
+      fb_link: "https://www.facebook.com/subinsatyal21",
+      insta_link: "https://www.instagram.com/subinsatyal02/",
+      image: "/images/testimonials/subin.jpg",
+      content: "Passionate web developer and tech enthusiast with a heart for social impact and community involvement.",
+    },
+    {
+      id: 6,
+      name: "Rtr. Ishan Poudel",
+      designation: "President Elect",
+      email: "ishanpoudel15@gmail.com",
+      phone: "9847386065",
+      fb_link: "https://www.facebook.com/profile.php?id=100013864575180",
+      insta_link: "https://www.instagram.com/itis_ishaann/",
+      image: "/images/testimonials/ishan.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 7,
+      name: "Rtr. Sushna Gurung",
+      designation: "International Service Chair",
+      email: "sushna.grg@gmail.com",
+      phone: "9861788617",
+      fb_link: "https://www.facebook.com/profile.php?id=100009133426904",
+      insta_link: "https://www.instagram.com/_sushnax/",
+      image: "/images/testimonials/Sushna-Gurung.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 8,
+      name: "Rtr. Abiral Shrestha",
+      designation: "Club Service Chair",
+      email: "abiralstha399@gmail.com",
+      phone: "9843564405",
+      fb_link: "https://www.facebook.com/PandaOP99",
+      insta_link: "https://www.instagram.com/shrestha_abiral99/",
+      image: "/images/testimonials/Abiral-Shrestha.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 9,
+      name: "Rtr. Simran Poudel",
+      designation: "Professional Development Chair",
+      email: "simranpoudel29@gmail.com",
+      phone: "9818392627",
+      fb_link: "https://www.facebook.com/profile.php?id=100009007588227",
+      insta_link: "https://www.instagram.com/siimraan.p/",
+      image: "/images/testimonials/simran.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 10,
+      name: "Rtr. Manisha Ghimire",
+      designation: "Membership Chair",
+      email: "mghimire0008@gmail.com",
+      phone: "9841563721",
+      fb_link: "https://www.facebook.com/manisha.ghimire.mindful.lady",
+      insta_link: "https://www.instagram.com/_manisha_ghimire_721/",
+      image: "/images/testimonials/manisha.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 11,
+      name: "Rtr. Manish Thapaliya",
+      designation: "Joint Secretary",
+      email: "mthapaliya0512@gmail.com",
+      phone: "9803369377",
+      fb_link: "https://www.facebook.com/manish.thapaliya.00",
+      insta_link: "https://www.instagram.com/manish.thapaliya.7.0/",
+      image: "/images/testimonials/Manish-Thapaliya.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 12,
+      name: "Rtr. Bharat Kapari",
+      designation: "Sergant at Arms",
+      email: "bharatkaparikumar@gmail.com",
+      phone: "9814822904",
+      fb_link: "https://www.facebook.com/bharatkapari12",
+      insta_link: "https://www.instagram.com/bharat_kapari/",
+      image: "/images/testimonials/bharat.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 13,
+      name: "Rtr. Sadiksha Ghimire",
+      designation: "Public Image Chair",
+      email: "test@gmail.com",
+      phone: "98765345456",
+      fb_link: "https://www.facebook.com/sadikshya.ghimire.3956/",
+      insta_link: "https://www.instagram.com/_.sadikshyaghimire._/",
+      image: "/images/testimonials/sadikshya.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+  ],
+  "2024/25": [
+    {
+      id: 1,
+      name: "Rtr. Ishan Poudel",
+      designation: "President",
+      email: "ishanpoudel15@gmail.com",
+      phone: "9847386065",
+      fb_link: "https://www.facebook.com/profile.php?id=100013864575180",
+      insta_link: "https://www.instagram.com/itis_ishaann/",
+      image: "/images/testimonials/ishan.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 2,
+      name: "Rtr. Udit Kumar Mahato",
+      designation: "Immediate Past President",
+      email: "test@gmail.com",
+      phone: "98765345456",
+      fb_link: "https://www.facebook.com/datasavvy1998",
+      insta_link: "https://www.instagram.com/datasavvy1998/",
+      image: "/images/testimonials/udit.png",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 3,
+      name: "Rtr. Sushna Gurung",
+      designation: "Vice President",
+      email: "sushna.grg@gmail.com",
+      phone: "9861788617",
+      fb_link: "https://www.facebook.com/profile.php?id=100009133426904",
+      insta_link: "https://www.instagram.com/_sushnax/",
+      image: "/images/testimonials/Sushna-Gurung.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 4,
+      name: "Rtr. Binayak Bhattarai",
+      designation: "Secertery",
+      email: "test@gmail.com",
+      phone: "23566788",
+      fb_link: "https://www.facebook.com/binayak.bhattarai.90",
+      insta_link: "https://www.instagram.com/binayak_bhattarai/",
+      image: "",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 5,
+      name: "Rtr. Manish Thapaliya",
+      designation: "Tresurer",
+      email: "mthapaliya0512@gmail.com",
+      phone: "9803369377",
+      fb_link: "https://www.facebook.com/manish.thapaliya.00",
+      insta_link: "https://www.instagram.com/manish.thapaliya.7.0/",
+      image: "/images/testimonials/Manish-Thapaliya.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 6,
+      name: "Rtr. Sadiksha Ghimire",
+      designation: "Professional Development Chair",
+      email: "test@gmail.com",
+      phone: "98765345456",
+      fb_link: "https://www.facebook.com/sadikshya.ghimire.3956/",
+      insta_link: "https://www.instagram.com/_.sadikshyaghimire._/",
+      image: "/images/testimonials/sadikshya.jpg",
+      content: "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 7,
+      name: "Rtr. Bhawani Aryal",
+      designation: "Service Project Chair",
+      email: "test@gmail.com",
+      phone: "98765345456",
+      fb_link: "https://www.facebook.com/profile.php?id=100088647874917",
+      insta_link: "https://www.instagram.com/awanielogy/",
+      image: "",
+      content:
+        "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 8,
+      name: "Rtr. Bharat Kapari",
+      designation: "Club Admin Chair",
+      email: "bharatkaparikumar@gmail.com",
+      phone: "9814822904",
+      fb_link: "https://www.facebook.com/bharatkapari12",
+      insta_link: "https://www.instagram.com/bharat_kapari/",
+      image: "/images/testimonials/bharat.jpg",
+      content:
+        "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 9,
+      name: "Rtr. Simran Poudel",
+      designation: "International Service Chair",
+      email: "simranpoudel29@gmail.com",
+      phone: "9818392627",
+      fb_link: "https://www.facebook.com/profile.php?id=100009007588227",
+      insta_link: "https://www.instagram.com/siimraan.p/",
+      image: "/images/testimonials/simran.jpg",
+      content:
+        "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 10,
+      name: "Rtr. Sanket Shrestha",
+      designation: "Public Image Chair",
+      email: "daniel.anderson@gmail.com",
+      phone: "7897897890",
+      fb_link: "https://www.facebook.com/daniel.anderson",
+      insta_link: "https://www.instagram.com/daniel.anderson/",
+      image: "/images/testimonials/daniel.png",
+      content: "The only way to do great work is to love what you do.",
+    },
+    {
+      id: 11,
+      name: "Rtr. Sudeep Fullel",
+      designation: "General Member",
+      email: "test@gmail.com",
+      phone: "98765345456",
+      fb_link: "https://www.facebook.com/sudeep.fullel",
+      insta_link: "https://www.instagram.com/ra_vana11/",
+      image: "",
+      content:
+        "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 12,
+      name: "Rtr. Anshu Maharjan",
+      designation: "Immediate Past President",
+      email: "Maharjan.anshu.am@gmail.com",
+      phone: "9862680627",
+      fb_link: "https://www.facebook.com/maharjan.anshu.am",
+      insta_link: "https://www.instagram.com/aanshu.m/",
+      image: "/images/testimonials/anshu.png",
+      content:
+        "Embrace each day with purpose and passion. Your potential knows no bounds. Keep pushing forward!",
+    },
+    {
+      id: 13,
+      name: "Rtr. Aasha Limbu",
+      designation: "Membership Chair",
+      email: "sophia.harris@gmail.com",
+      phone: "9873216540",
+      fb_link: "https://www.facebook.com/sophia.harris",
+      insta_link: "https://www.instagram.com/sophia.harris/",
+      image: "/images/testimonials/sophia.png",
+      content: "Your limitation—it's only your imagination.",
+
+    },
+    {
+      id: 14,
+      name: "Rtr. Dikshyant Madai",
+      designation: "Joint Secertary",
+      email: "william.robinson@gmail.com",
+      phone: "1239876540",
+      fb_link: "https://www.facebook.com/william.robinson",
+      insta_link: "https://www.instagram.com/william.robinson/",
+      image: "/images/testimonials/william.png",
+      content: "Your limitation—it's only your imagination.",
+    },
+  ],
+};
 
 const Members = () => {
+  const [selectedYear, setSelectedYear] = useState<string>("2023/24");
+
+  const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedYear(event.target.value);
+  };
+
+  const testimonialData: MemberDetails[] = boardMembers[selectedYear];
+
   return (
     <section className="relative z-10 bg-primary/[.03] py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Board Member- 2023/24"
+          title="Board Member"
           paragraph="The board members with their designation."
           center
         />
+
+        <div className="mb-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 sm:justify-center">
+          <label htmlFor="year" className="mr-4 text-lg font-medium">
+            Select Year:
+          </label>
+          <select
+            id="year"
+            value={selectedYear}
+            onChange={handleYearChange}
+            className="border border-gray-300 p-2 rounded-md shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+          >
+            {Object.keys(boardMembers).map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((testimonial) => (
@@ -252,55 +431,40 @@ const Members = () => {
               d="M-57 23L50.0728 85.8548C55.5501 90.0219 70.8513 96.7589 88.2373 90.3692C109.97 82.3821 116.861 71.9642 156.615 74.7423C178.778 76.291 195.31 80.2985 205.911 73.3533C216.513 66.408 224.994 58.7682 243.016 60.1572C255.835 61.1453 265.278 61.8936 278 56.3373"
               stroke="url(#paint2_linear_72:302)"
             />
-            <path
-              d="M-57 35L50.0728 97.8548C55.5501 102.022 70.8513 108.759 88.2373 102.369C109.97 94.3821 116.861 83.9642 156.615 86.7423C178.778 88.291 195.31 92.2985 205.911 85.3533C216.513 78.408 224.994 70.7682 243.016 72.1572C255.835 73.1453 265.278 73.8936 278 68.3373"
-              stroke="url(#paint3_linear_72:302)"
-            />
           </g>
           <defs>
             <linearGradient
               id="paint0_linear_72:302"
-              x1="256.267"
-              y1="53.6717"
-              x2="-40.8688"
-              y2="8.15715"
+              x1="110.5"
+              y1="0.499996"
+              x2="110.5"
+              y2="77"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#4A6CF7" />
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_72:302"
-              x1="256.267"
-              y1="42.6717"
-              x2="-40.8688"
-              y2="-2.84285"
+              x1="110.5"
+              y1="-10.5"
+              x2="110.5"
+              y2="66"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#4A6CF7" />
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_72:302"
-              x1="256.267"
-              y1="64.6717"
-              x2="-40.8688"
-              y2="19.1572"
+              x1="110.5"
+              y1="11.5"
+              x2="110.5"
+              y2="88"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
-            </linearGradient>
-            <linearGradient
-              id="paint3_linear_72:302"
-              x1="256.267"
-              y1="76.6717"
-              x2="-40.8688"
-              y2="31.1572"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#4A6CF7" />
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
